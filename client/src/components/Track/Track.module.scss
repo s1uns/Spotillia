@@ -1,0 +1,57 @@
+.table-header {
+    font-size: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.125rem;
+}
+
+.track {
+    font-size: 2rem;
+
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.125rem;
+    transition-property: color, background-color, border-color,
+        text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+
+    &:hover {
+        background-color: #313131;
+        cursor: pointer;
+        color: white;
+    }
+
+    &-img {
+        margin-left: 17rem;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.download-icon {
+    position: absolute;
+    font-size: 3rem;
+    right: 0;
+    top: 25%;
+    z-index: 1000;
+}
