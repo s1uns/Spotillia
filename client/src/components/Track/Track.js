@@ -3,6 +3,7 @@ import { BsPlayFill, BsPauseFill } from "react-icons/bs";
 import { Howl } from "howler";
 import styles from "./Track.module.scss";
 import { MdFileDownload } from "react-icons/md";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 export default function Track({
     track,
@@ -62,9 +63,14 @@ export default function Track({
             <div className="col-span-1 flex items-center justify-start">
                 {track.duration}
             </div>
-            <a href={track.src} download>
+            <a href={track.src} download={`${track.title}.mp3`}>
                 <MdFileDownload className={styles["download-icon"]} />
             </a>
+            {track.isLiked ? (
+                <FaHeart className={styles["like-btn"]} />
+            ) : (
+                <FaRegHeart className={styles["like-btn"]} />
+            )}
         </div>
     );
 }

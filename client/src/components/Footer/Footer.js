@@ -1,5 +1,6 @@
-import { BsSpotify, BsPlayFill, BsPauseFill } from "react-icons/bs";
+import { BsPlay, BsPause } from "react-icons/bs";
 import { Howler } from "howler";
+import styles from "./Footer.module.scss";
 
 export default function Footer({ selectedHowl, playing, setPlaying }) {
     const handleVolumeChange = (e) => {
@@ -19,32 +20,27 @@ export default function Footer({ selectedHowl, playing, setPlaying }) {
     };
 
     return (
-        <div className="bg-header w-full p-4 flex items-center justify-between absolute bottom-0 left-0">
-            <div className="flex items-center">
-                <BsSpotify className="text-textLight" size="30px" />
-                <h1 className="text-textLight ml-2 font-bold text-2xl">
-                    Notify
-                </h1>
-            </div>
-            <div className="flex items-center">
-                <input
-                    type="range"
-                    max="100"
-                    defaultValue="100"
-                    onChange={handleVolumeChange}
-                    className="cursor-pointer"
-                />
-                <button
-                    className="text-textLight bg-brand p-2 rounded-full ml-4"
-                    onClick={togglePlay}
-                >
-                    {playing ? (
-                        <BsPauseFill size="24px" />
-                    ) : (
-                        <BsPlayFill size="24px" />
-                    )}
-                </button>
-            </div>
+        <div className={styles["footer"]}>
+            <input
+                type="range"
+                max="100"
+                defaultValue="100"
+                onChange={handleVolumeChange}
+                className={styles["range"]}
+            />
+            <button
+                className="text-textLight bg-brand p-2 rounded-full ml-4"
+                onClick={togglePlay}
+            >
+                {playing ? (
+                    <BsPause
+                        className={styles["play-btn"]}
+                        size="50px"
+                    />
+                ) : (
+                    <BsPlay className={styles["play-btn"]} size="50px" />
+                )}
+            </button>
         </div>
     );
 }

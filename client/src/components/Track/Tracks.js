@@ -11,6 +11,7 @@ const tracks = [
         album: "Neverliuk",
         imgSrc: "https://unsplash.it/40/40",
         duration: "3:03",
+        isLiked: true,
     },
     {
         id: 2,
@@ -20,6 +21,7 @@ const tracks = [
         album: "Edd's Album",
         imgSrc: "https://unsplash.it/40/40",
         duration: "3:52",
+        isLiked: false,
     },
     {
         id: 3,
@@ -29,6 +31,7 @@ const tracks = [
         album: "Eddy's Album",
         imgSrc: "https://unsplash.it/40/40",
         duration: "2:31",
+        isLiked: true,
     },
     {
         id: 4,
@@ -38,6 +41,7 @@ const tracks = [
         album: "Eddy's Album",
         imgSrc: "https://unsplash.it/40/40",
         duration: "2:31",
+        isLiked: false,
     },
     {
         id: 5,
@@ -47,6 +51,7 @@ const tracks = [
         album: "Eddy's Album",
         imgSrc: "https://unsplash.it/40/40",
         duration: "2:31",
+        isLiked: false,
     },
     {
         id: 6,
@@ -56,6 +61,7 @@ const tracks = [
         album: "Eddy's Album",
         imgSrc: "https://unsplash.it/40/40",
         duration: "2:31",
+        isLiked: true,
     },
     {
         id: 7,
@@ -65,6 +71,7 @@ const tracks = [
         album: "Eddy's Album",
         imgSrc: "https://unsplash.it/40/40",
         duration: "2:31",
+        isLiked: false,
     },
 ];
 
@@ -88,6 +95,7 @@ export default function Tracks({
                         playing={playing}
                         setPlaying={setPlaying}
                         isFirstTrack={idx === 0}
+                        isLiked={track.isLiked}
                     />
                 );
             })}

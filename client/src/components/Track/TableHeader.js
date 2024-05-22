@@ -9,7 +9,7 @@ export default function TableHeader() {
             <span className={styles["huge-col"]}>TITLE</span>
             <span className={styles["huge-col"]}>ALBUM</span>
             <span className={styles["small-col"]}>
-                <BsClock size="18px" />
+                <BsClock className={styles["time"]} size="18px" />
             </span>
         </div>
     );

@@ -48,10 +48,21 @@
     }
 }
 
+.time {
+    margin-top: 2rem;
+    margin-right: 3rem;
+}
+
 .download-icon {
     position: absolute;
     font-size: 3rem;
-    right: 0;
+    right: 3%;
     top: 25%;
     z-index: 1000;
+}
+
+.like-btn {
+    position: absolute;
+    top: 25%;
+    left: 15%;
 }

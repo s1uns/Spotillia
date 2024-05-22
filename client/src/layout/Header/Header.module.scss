@@ -11,11 +11,12 @@
     box-shadow: 0 3px 4px -1px gray;
     overflow: hidden;
 
-    .current-page{
-        height: 100%;      
+    .current-page {
+        font-size: 4rem;
+        height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;  
+        align-items: center;
         width: 20rem;
     }
 
