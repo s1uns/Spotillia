@@ -3,13 +3,13 @@ import { ICredentials, ISignInResult } from "../types/interfaces";
 
 const url = process.env.VITE_ASPNETCORE_HTTPS_PORT
     ? process.env.VITE_ASPNETCORE_HTTPS_PORT
-    : "https://localhost:7189/api/";
+    : "http://localhost:5000/";
 
 
 
 export const signIn = async (credentials: ICredentials) => {
     const { data } = await axios.post<ISignInResult>(
-        `${url}Account/sign-in`,
+        `${url}auth/login`,
         credentials
     );
 
@@ -18,7 +18,7 @@ export const signIn = async (credentials: ICredentials) => {
 
 export const signUp = async (credentials: ICredentials) => {
     const { data } = await axios.post<ISignInResult>(
-        `${url}Account/sign-up`,
+        `${url}auth/register`,
         credentials
     );
 

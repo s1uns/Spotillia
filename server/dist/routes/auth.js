@@ -24,7 +24,6 @@ router.post("/register", (req, res) => __awaiter(void 0, void 0, void 0, functio
     yield users.insertOne({
         email: req.body.email,
         password,
-        username: req.body.username,
     });
     res.status(200).json({ message: "Registered successfully" });
 }));
