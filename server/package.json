@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "server.ts",
   "scripts": {
-    "dev": "tsc-watch --noClear --onSuccess \"node ./dist/src/server.ts\"",
-    "start": "tsc && node dist/src/server.ts"
+    "dev": "nodemon server",
+    "start": "node server"
   },
   "keywords": [],
   "author": "",

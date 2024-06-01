@@ -7,24 +7,35 @@ export interface User {
 }
 
 export interface Song {
-    userId: ObjectId;
-    categoryId: ObjectId;
-    filename: string;
-    mimeType: string;
+    genreId: string;
     title: string;
-    genre?: string;
-    release?: Date;
-    duration: number;
-    lyrics?: string;
-    uploaded: Date;
+    artist: string;
+    duration: string;
+    src: string;
+    isLiked: boolean;
 }
 
-export interface Category {
-    categoryName: string;
+export type SongType = {
+    id: string;
+    title: string;
+    genre: string;
+    artist: string;
+    duration: string;
+    src: string;
+    isLiked: boolean;
+};
+
+export interface Genre {
+    title: string;
 }
 
 export interface Review {
     userId: ObjectId;
     songId: ObjectId;
     reviewText: string;
+}
+
+export interface Like {
+    userId: ObjectId;
+    songId: ObjectId;
 }
