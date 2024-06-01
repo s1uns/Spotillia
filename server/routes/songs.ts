@@ -23,38 +23,5 @@ router.get(
     }),
 );
 
-router.get(
-    "/liked-songs",
-    asyncHandler(async (req: Request, res: Response) => {
-        const db = getDb();
-        const collection = db.collection<Song>("song");
-
-        const songs = await collection
-            .find({ userId: req.auth.id })
-            .sort({ date: -1 })
-            .toArray();
-        res.status(200).json(songs);
-    }),
-);
-
-router.get(
-    "/:id",
-    asyncHandler(async (req: Request, res: Response) => {
-        const db = getDb();
-        const collection = db.collection<Song>("song");
-
-        const song = await collection.findOne({
-            _id: new ObjectId(req.params.id),
-        });
-
-        if (song === null) {
-            res.status(404).send("Song not found");
-            return;
-        }
-
-        res.status(200).json(song);
-    }),
-);
-
 router.use(verifyAuth());
 export default router;
