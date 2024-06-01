@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BsPlayFill, BsPauseFill } from "react-icons/bs";
 import { Howl } from "howler";
 import styles from "./Track.module.scss";
 import { MdFileDownload } from "react-icons/md";
-import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 export default function Track({
     track,
@@ -66,11 +65,6 @@ export default function Track({
             <a href={track.src} download={`${track.title}.mp3`}>
                 <MdFileDownload className={styles["download-icon"]} />
             </a>
-            {track.isLiked ? (
-                <FaHeart className={styles["like-btn"]} />
-            ) : (
-                <FaRegHeart className={styles["like-btn"]} />
-            )}
         </div>
     );
 }

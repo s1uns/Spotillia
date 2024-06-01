@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import TableHeader from "./TableHeader";
 import Track from "./Track";
 import { getSongs } from "../../api/api";
@@ -14,7 +14,6 @@ export default function Tracks({
     useEffect(() => {
         (async () => {
             const data = await getSongs();
-            console.log("Data: ", data);
             setTracks(data);
         })();
     }, []);

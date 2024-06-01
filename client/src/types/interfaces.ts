@@ -39,27 +39,5 @@ export interface ISignInResult {
     bearer: string;
 }
 
-export interface IDeleteDialog {
-    entityName: string;
-    render: (onClick: () => void) => ReactNode;
-    handleAgree: () => void;
-}
-
-export interface IUpdateDialog {
-    entityName: string;
-    render: (onClick: () => void) => ReactNode;
-    handleAgree: () => void;
-    handleClose: () => void;
-    currentValue: string;
-    onChangeValue: (e: ChangeEvent<HTMLInputElement>) => void;
-}
-
-export interface IUploadDialog {
-    render: (onClick: () => void) => ReactNode;
-    handleAgree: () => void;
-    handleClose: () => void;
-    currentValue: FormData | null;
-    onChangeValue: (e: ChangeEvent<HTMLInputElement>) => void;
-}
 
 

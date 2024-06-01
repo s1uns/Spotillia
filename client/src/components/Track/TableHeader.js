@@ -1,4 +1,3 @@
-import React from "react";
 import { BsClock } from "react-icons/bs";
 import styles from "./Track.module.scss";
 

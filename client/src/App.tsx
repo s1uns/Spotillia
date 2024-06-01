@@ -22,7 +22,7 @@ const NotFound = lazy(
 );
 
 function App() {
-    const user = localStorage.getItem("userId");
+    const user = localStorage.getItem("bearer");
     const [isLogged, setIsLogged] = useState<boolean>(user?.length! > 0);
     const [currentPage, setCurrentPage] = useState<string>("Home");
     const [selectedHowl, setSelectedHowl] = useState(null);

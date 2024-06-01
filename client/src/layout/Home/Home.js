@@ -1,5 +1,4 @@
-import { FC, useState } from "react";
-import styles from "./Home.module.scss";
+
 import "react-toastify/dist/ReactToastify.css";
 import Tracks from "../../components/Track/Tracks";
 
